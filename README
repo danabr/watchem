@@ -1,0 +1,18 @@
+wath'em is a Ruby script for quickly finding github repos you may find interesting.
+
+Usage:
+# Top ten repos
+$ ruby watchem.rb myusername
+
+# Display up to 20 repos
+$ ruby watchem.rb mysusername 20
+
+What is deemed to be interesting?
+watch'em assumes that what people you follow find interesting is also interesting
+for you. watch'em looks at the repositories the people you follow are watching,
+and each repository gains 1 point for each time it occurs.
+
+Note: watch'em calls the github API N+2 times:
+ 1 (people you are following) +
+ 1 (repos   you are watching) + 
+ N (the number of people you are following).
